@@ -100,12 +100,12 @@ def get_recomendacion_movies(rating: float, duracion: int, year: int, platform: 
     y = r_movies['indice']
 
     peliculas = []
-    for k in [1,50,100,200,3000]:
+    for k in [1,5,10,20,30]:
         knn = KNeighborsClassifier(n_neighbors=k)
 
         knn.fit(X, y)
 
-        new_point = [(duracion, rating, year,plataforma)]
+        new_point = [(duracion, rating+(k/30), year,plataforma)]
 
         prediction = knn.predict(new_point)
 
