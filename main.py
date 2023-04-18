@@ -109,7 +109,7 @@ def get_recomendacion_movies(rating: float, duracion: int, year: int, platform: 
 
         prediction = knn.predict(new_point)
 
-        peliculas.append(r_movies.loc[*prediction, 'title'])
+        peliculas.append(r_movies.loc[prediction[0], 'title'])
 
     return peliculas
 
