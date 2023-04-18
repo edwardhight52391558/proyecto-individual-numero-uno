@@ -105,7 +105,7 @@ def get_recomendacion_movies(rating: float, duracion: int, year: int, platform: 
 
         knn.fit(X, y)
 
-        new_point = [(duracion, rating+(k/30), year,plataforma)]
+        new_point = [(duracion+k, rating, year,plataforma)]
 
         prediction = knn.predict(new_point)
 
