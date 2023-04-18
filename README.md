@@ -1,3 +1,3 @@
 PROYECTO INDIVIDUAL NUMERO UNO - SOY HENRY
 
-Eduardo Ruben Dominguez
+por Eduardo Ruben Dominguez
