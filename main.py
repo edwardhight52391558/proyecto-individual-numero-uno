@@ -77,6 +77,7 @@ def get_actor(platform: str,year: int):
     for i in actores:
         for k in i: actor.append(k)
     actor = pd.DataFrame(actor)
+    actor = actor[actor[0]!='sin dato']
     return actor.value_counts().index[0][0].strip()
 
 @app_movies.get('/prod_per_county/{tipo}/{pais}/{year}')
